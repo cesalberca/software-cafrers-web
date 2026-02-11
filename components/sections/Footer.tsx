@@ -1,0 +1,100 @@
+export function Footer() {
+  return (
+    <footer className="py-12 px-4 border-t border-gold/10">
+      <div className="max-w-4xl mx-auto text-center space-y-6">
+        <a
+          href="https://savvily.es/libros/software-cafrers/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-gold text-navy font-black text-lg px-8 py-4 rounded-lg hover:bg-gold-dark transition-all hover:scale-105"
+        >
+          COMPRAR SOFTWARE CAFRERS
+        </a>
+
+        <div className="text-white/50 text-sm space-y-2">
+          <p>
+            <span className="text-gold/80 font-semibold">
+              Software Cafrers: Haciendo Código que Haría Vomitar a una Cabra
+            </span>
+          </p>
+          <p>
+            Incluye Prólogo de{' '}
+            <a
+              href="https://www.carlosble.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold/60 hover:text-gold underline underline-offset-4 transition-colors"
+            >
+              Carlos Blé
+            </a>{' '}
+            y Epílogo de{' '}
+            <a
+              href="https://adrianferrera.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold/60 hover:text-gold underline underline-offset-4 transition-colors"
+            >
+              Adrián Ferrera
+            </a>
+          </p>
+          <p>
+            por{' '}
+            <a
+              href="https://cesalberca.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold/60 hover:text-gold underline underline-offset-4 transition-colors"
+            >
+              César Alberca
+            </a>
+          </p>
+          <p>
+            Ilustraciones por{' '}
+            <a
+              href="https://aldariasart.es"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold/60 hover:text-gold underline underline-offset-4 transition-colors"
+            >
+              Marta Aldarias Villacañas
+            </a>{' '}
+            (
+            <a
+              href="https://instagram.com/aldarias_art"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold/60 hover:text-gold underline underline-offset-4 transition-colors"
+            >
+              @aldarias_art
+            </a>
+            )
+          </p>
+          <p>
+            Publicado por{' '}
+            <a
+              href="https://savvily.es/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold/60 hover:text-gold underline underline-offset-4 transition-colors"
+            >
+              Savvily
+            </a>
+          </p>
+        </div>
+
+        <p className="text-white/20 text-xs max-w-lg mx-auto">
+          Ningún animal fue dañado durante la creación de este libro. Varios desarrolladores sí, pero eso es
+          irrelevante. Todas las reseñas son ficticias. Los nombres de las publicaciones están mal escritos a propósito.
+          Si has llegado hasta aquí, probablemente deberías comprar el libro.
+        </p>
+
+        <div className="pt-4 border-t border-gold/5">
+          <p className="text-white/15 text-xs">
+            &copy; {new Date().getFullYear()} César Alberca. Todos los derechos reservados. Publicado por Savvily.
+            Ningún código fue mejorado durante la producción de este sitio web.
+          </p>
+        </div>
+      </div>
+    </footer>
+  )
+}
