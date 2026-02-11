@@ -15,10 +15,12 @@ import { FreeSample } from '@/components/sections/FreeSample'
 import { Guarantees } from '@/components/sections/Guarantees'
 import { Bonus } from '@/components/sections/Bonus'
 import { FAQ } from '@/components/sections/FAQ'
+import { BuySection } from '@/components/sections/BuySection'
 import { GoatChatbot } from '@/components/sections/GoatChatbot'
 import { InterlacedTestimonial } from '@/components/sections/InterlacedTestimonial'
 import { Footer } from '@/components/sections/Footer'
 import { PeskyModal } from '@/components/sections/PeskyModal'
+import { ConsoleArt } from '@/components/ConsoleArt'
 
 export default function Home() {
   return (
@@ -51,31 +53,27 @@ export default function Home() {
 
       <InterlacedTestimonial quote="Ideal para calzar monitores." author="Revista Forves" />
 
-      <VideoTestimonials />
-
       <Testimonials />
 
       <Comparison />
-
-      <InterlacedTestimonial quote="Inapetente incluso para rumiantes." author="National Geographyc" />
 
       <FreeSample />
 
       <Guarantees />
 
+      <InterlacedTestimonial quote="Inapetente incluso para rumiantes." author="National Geographyc" />
+
       <Bonus />
 
-      <InterlacedTestimonial
-        quote="Mi terapeuta dice que no debería leerlo. Mi terapeuta no sabe JavaScript."
-        author="Paciente 0 del burnout"
-      />
-
       <FAQ />
+
+      <BuySection />
 
       <Footer />
 
       <GoatChatbot />
       <PeskyModal />
+      <ConsoleArt />
     </main>
   )
 }

@@ -7,23 +7,30 @@ export function Editorial() {
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gold mb-8">Editorial</h2>
 
         <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-          Publicado por <span className="text-gold font-bold">Savvily</span>, la editorial que tuvo el valor (o la falta
+          Publicado por <a
+          href="https://savvily.es/?utm_source=softwarecafrers"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gold font-bold hover:text-gold-light underline underline-offset-4 transition-colors"
+        >
+          Savvily
+        </a>, la editorial que tuvo el valor (o la falta
           de criterio) de publicar este libro. Su lema es &quot;Conocimiento que compartir&quot;, aunque en este caso
           quizás deberían haber compartido... menos.
         </p>
 
         <a
-          href="https://savvily.es/"
+          href="https://savvily.es/?utm_source=softwarecafrers"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block mb-8 hover:opacity-80 transition-opacity"
         >
           <Image
-            src="/savvily-logo.png"
+            src="/savvily.png"
             alt="Savvily - Conocimiento que compartir"
-            width={200}
-            height={60}
-            className="h-12 w-auto opacity-90"
+            width={400}
+            height={200}
+            className="w-auto"
           />
         </a>
 
@@ -32,7 +39,7 @@ export function Editorial() {
             &quot;Cuando César nos envió el manuscrito, pensamos que era una broma. Luego vimos que iba en serio. Y
             luego vimos las ventas. A veces el mercado premia lo que la dignidad castiga.&quot;
           </p>
-          <p className="text-gold text-sm font-bold">&mdash; Departamento editorial de Savvily (probablemente)</p>
+          <p className="text-gold text-sm font-bold">&mdash; Departamento editorial de Savvily</p>
         </div>
 
         <div className="mt-8">

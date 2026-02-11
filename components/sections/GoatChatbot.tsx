@@ -90,7 +90,7 @@ export function GoatChatbot() {
             <div className="flex items-center gap-2">
               <Image src="/right-goat.svg" alt="" width={826} height={1192} className="w-6 h-6 object-contain" />
               <div>
-                <p className="text-gold font-bold text-sm">CabraBot&trade;</p>
+                <p className="text-gold font-bold text-sm">ChatGoat&trade;</p>
                 <p className="text-white/50 text-xs">Asistente de compras no solicitado</p>
               </div>
             </div>
@@ -121,7 +121,7 @@ export function GoatChatbot() {
 
           <div className="p-3 border-t border-gold/20">
             <a
-              href="https://savvily.es/libros/software-cafrers/"
+              href="https://savvily.es/libros/software-cafrers/?utm_source=softwarecafrers"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full bg-gold text-navy font-black text-center py-3 rounded-lg hover:bg-gold-dark transition-all animate-urgent-pulse"
@@ -150,7 +150,7 @@ export function GoatChatbot() {
           alt=""
           width={826}
           height={1192}
-          className="w-10 h-10 object-contain"
+          className="w-10 h-10 object-cover object-top"
           aria-hidden="true"
         />
         {!hasInteracted && <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full animate-ping" />}

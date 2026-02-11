@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { playGoatSound } from '@/lib/goat-sound'
 
 export function PeskyModal() {
   const [show, setShow] = useState(false)
@@ -14,7 +13,6 @@ export function PeskyModal() {
       const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)
       if (scrollPercent > 0.4 && !dismissed) {
         setShow(true)
-        playGoatSound()
       }
     }
 
@@ -46,7 +44,7 @@ export function PeskyModal() {
           </p>
 
           <a
-            href="https://savvily.es/libros/software-cafrers/"
+            href="https://savvily.es/libros/software-cafrers/?utm_source=softwarecafrers"
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full bg-gold text-navy font-black text-lg py-4 rounded-xl hover:bg-gold-dark transition-all animate-pulse-gold mb-3"

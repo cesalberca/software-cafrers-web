@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Image from 'next/image'
-import { playGoatSoundLong } from '@/lib/goat-sound'
 
 const CODE_SNIPPETS = [
   'if(x==true==false){',
@@ -33,6 +32,28 @@ const CODE_SNIPPETS = [
   'Math.random() > 0.5 && deploy();',
 ]
 
+// Predefined non-overlapping grid positions for code snippets
+const GRID_POSITIONS = [
+  { x: 2, y: 5 },
+  { x: 35, y: 3 },
+  { x: 65, y: 2 },
+  { x: 5, y: 22 },
+  { x: 40, y: 18 },
+  { x: 72, y: 20 },
+  { x: 8, y: 38 },
+  { x: 38, y: 35 },
+  { x: 68, y: 37 },
+  { x: 3, y: 55 },
+  { x: 35, y: 52 },
+  { x: 70, y: 55 },
+  { x: 10, y: 72 },
+  { x: 42, y: 68 },
+  { x: 75, y: 72 },
+  { x: 20, y: 85 },
+  { x: 55, y: 85 },
+  { x: 80, y: 88 },
+]
+
 function VomitCode({ fading }: { fading: boolean }) {
   const [snippets, setSnippets] = useState<
     { id: number; text: string; x: number; y: number; delay: number; size: number }[]
@@ -40,15 +61,20 @@ function VomitCode({ fading }: { fading: boolean }) {
 
   useEffect(() => {
     let counter = 0
+    let posIndex = 0
     const interval = setInterval(() => {
-      const batch = Array.from({ length: 3 }, () => ({
-        id: counter++,
-        text: CODE_SNIPPETS[Math.floor(Math.random() * CODE_SNIPPETS.length)],
-        x: Math.random() * 80,
-        y: Math.random() * 80,
-        delay: Math.random() * 0.5,
-        size: Math.random() * 0.6 + 0.7,
-      }))
+      const batch = Array.from({ length: 3 }, () => {
+        const pos = GRID_POSITIONS[posIndex % GRID_POSITIONS.length]
+        posIndex++
+        return {
+          id: counter++,
+          text: CODE_SNIPPETS[Math.floor(Math.random() * CODE_SNIPPETS.length)],
+          x: pos.x + (Math.random() * 6 - 3),
+          y: pos.y + (Math.random() * 4 - 2),
+          delay: Math.random() * 0.5,
+          size: Math.random() * 0.6 + 0.7,
+        }
+      })
       setSnippets((prev) => [...prev.slice(-25), ...batch])
     }, 350)
     return () => clearInterval(interval)
@@ -81,6 +107,7 @@ function VomitCode({ fading }: { fading: boolean }) {
 function Book3D() {
   const containerRef = useRef<HTMLDivElement>(null)
   const [rotation, setRotation] = useState({ x: 3, y: -12 })
+  const [isFlipped, setIsFlipped] = useState(false)
 
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current) return
@@ -96,29 +123,53 @@ function Book3D() {
     setRotation({ x: 3, y: -12 })
   }, [])
 
+  const handleClick = useCallback(() => {
+    setIsFlipped((prev) => !prev)
+  }, [])
+
   return (
     <div
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      onClick={handleClick}
       className="cursor-pointer"
       style={{ perspective: '1200px' }}
     >
       <div
-        className="relative w-56 sm:w-72 md:w-80 transition-transform duration-200 ease-out"
+        className="relative w-56 sm:w-72 md:w-80 transition-transform duration-700 ease-out"
         style={{
-          transform: `rotateY(${rotation.y}deg) rotateX(${rotation.x}deg)`,
+          transform: `rotateY(${rotation.y + (isFlipped ? 180 : 0)}deg) rotateX(${rotation.x}deg)`,
           transformStyle: 'preserve-3d',
         }}
       >
-        <Image
-          src="/cover.png"
-          alt="Portada de Software Cafrers: Haciendo Código que Haría Vomitar a una Cabra"
-          width={600}
-          height={800}
-          className="w-full h-auto rounded shadow-[20px_25px_60px_rgba(0,0,0,0.6),-5px_-5px_30px_rgba(252,193,70,0.08)]"
-          priority
-        />
+        {/* Front cover */}
+        <div style={{ backfaceVisibility: 'hidden' }}>
+          <Image
+            src="/cover.png"
+            alt="Portada de Software Cafrers: Haciendo Código que Haría Vomitar a una Cabra"
+            width={600}
+            height={800}
+            className="w-full h-auto rounded shadow-[20px_25px_60px_rgba(0,0,0,0.6),-5px_-5px_30px_rgba(252,193,70,0.08)]"
+            priority
+          />
+        </div>
+        {/* Back cover */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backfaceVisibility: 'hidden',
+            transform: 'rotateY(180deg)',
+          }}
+        >
+          <Image
+            src="/backcover.png"
+            alt="Contraportada de Software Cafrers"
+            width={600}
+            height={800}
+            className="w-full h-auto rounded shadow-[20px_25px_60px_rgba(0,0,0,0.6),-5px_-5px_30px_rgba(252,193,70,0.08)]"
+          />
+        </div>
         <div
           className="absolute top-0 -right-4 w-4 h-full rounded-r"
           style={{
@@ -141,12 +192,10 @@ function Book3D() {
 export function Hero() {
   const [phase, setPhase] = useState<'vomit' | 'fading' | 'book'>('vomit')
   const [showText, setShowText] = useState(false)
-  const hasPlayedSound = useRef(false)
+  const [showGoats, setShowGoats] = useState(false)
+  const [onlineCount, setOnlineCount] = useState(0)
 
   useEffect(() => {
-    // Phase 1: code snippets appear with opacity (2s)
-    // Phase 2: fade out code snippets (1s)
-    // Phase 3: show book + play sound
     const fadeTimer = setTimeout(() => setPhase('fading'), 2000)
     const bookTimer = setTimeout(() => {
       setPhase('book')
@@ -160,19 +209,43 @@ export function Hero() {
   }, [])
 
   useEffect(() => {
-    if (phase === 'book' && !hasPlayedSound.current) {
-      hasPlayedSound.current = true
-      playGoatSoundLong()
+    if (showText) {
+      const goatTimer = setTimeout(() => setShowGoats(true), 600)
+      return () => clearTimeout(goatTimer)
     }
-  }, [phase])
+  }, [showText])
+
+  useEffect(() => {
+    setOnlineCount(Math.floor(Math.random() * 30) + 85)
+    const interval = setInterval(() => {
+      setOnlineCount((prev) => prev + Math.floor(Math.random() * 7) - 3)
+    }, 4000)
+    return () => clearInterval(interval)
+  }, [])
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 pt-8 pb-16">
+    <section className="mt-16 relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 pt-8 pb-16">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(252,193,70,0.08)_0%,_transparent_70%)]" />
 
       <div className="relative z-10 flex flex-col items-center gap-6 max-w-5xl mx-auto w-full">
         <div className="relative flex items-center justify-center w-full min-h-[350px] sm:min-h-[450px]">
           {phase !== 'book' && <VomitCode fading={phase === 'fading'} />}
+
+          {/* Left goat */}
+          <div
+            className={`absolute left-0 bottom-0 sm:bottom-4 z-0 transition-transform duration-700 ease-out ${
+              showGoats ? 'translate-x-0' : '-translate-x-[200%]'
+            }`}
+          >
+            <Image
+              src="/left-goat.svg"
+              alt=""
+              width={826}
+              height={1192}
+              className="w-20 sm:w-28 md:w-106 h-auto opacity-80"
+              aria-hidden="true"
+            />
+          </div>
 
           <div className="relative flex flex-col items-center z-10">
             <div
@@ -182,6 +255,22 @@ export function Hero() {
             >
               <Book3D />
             </div>
+          </div>
+
+          {/* Right goat */}
+          <div
+            className={`absolute right-0 bottom-0 sm:bottom-4 z-0 transition-transform duration-700 ease-out ${
+              showGoats ? 'translate-x-0' : 'translate-x-[200%]'
+            }`}
+          >
+            <Image
+              src="/right-goat.svg"
+              alt=""
+              width={826}
+              height={1192}
+              className="w-20 sm:w-28 md:w-72 h-auto opacity-80"
+              aria-hidden="true"
+            />
           </div>
         </div>
 
@@ -214,14 +303,23 @@ export function Hero() {
             }`}
           >
             <a
-              href="https://savvily.es/libros/software-cafrers/"
+              href="https://savvily.es/libros/software-cafrers/?utm_source=softwarecafrers"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-gold text-navy font-black text-lg sm:text-xl px-10 py-4 rounded-xl hover:bg-gold-dark transition-all animate-pulse-gold hover:scale-105 shadow-lg shadow-gold/20"
             >
               COMPRAR AHORA
             </a>
-            <span className="text-sm text-white/50 animate-urgent-pulse">Solo quedan 42 copias*</span>
+            <div className="flex flex-col items-start gap-1">
+              <span className="text-sm text-white/50 animate-urgent-pulse">Solo quedan <u>42 copias</u>*</span>
+              <span className="flex items-center gap-1.5 text-xs text-white/40">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
+                </span>
+                {onlineCount} personas viendo esto ahora
+              </span>
+            </div>
           </div>
 
           <p
@@ -229,7 +327,7 @@ export function Hero() {
               showText ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            *Mentira. Pero te lo has creído un segundo, ¿eh?
+            *Mentira, pero necesitamos las ventas y esto suele funcionar.
           </p>
         </div>
       </div>

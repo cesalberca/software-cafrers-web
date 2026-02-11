@@ -67,7 +67,7 @@ export function Comparison() {
     <section id="comparacion" className="py-20 px-4 bg-navy-dark/50">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gold mb-4 text-center">Comparativa Objetiva</h2>
-        <p className="text-center text-white/60 mb-12 text-lg">Software Cafrers vs. Una Piedra</p>
+        <p className="text-center text-white/60 mb-12 text-lg">Una Piedra vs. Software Cafrers</p>
 
         <div className="overflow-x-auto">
           <table className="w-full border-collapse">

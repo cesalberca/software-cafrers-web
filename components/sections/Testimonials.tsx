@@ -1,4 +1,5 @@
 import { TestimonialCard } from './TestimonialCard'
+import {VideoTestimonials} from "@/components/sections/VideoTestimonials";
 
 const TESTIMONIALS = [
   {
@@ -27,14 +28,6 @@ const TESTIMONIALS = [
     author: 'Un Scrum Master Anónimo',
   },
   {
-    quote: 'Mi hijo lo leyó y ahora hace código aún peor. 5 estrellas.',
-    author: 'Una madre en Amaozn',
-  },
-  {
-    quote: 'Lo usé como referencia en una code review y me ascendieron. No pregunten.',
-    author: 'Senior Developer (auto-proclamado)',
-  },
-  {
     quote: 'Prefiero hacer pair programming con una cabra que volver a leer este libro.',
     author: 'Un reviewer de Googol',
   },
@@ -54,6 +47,8 @@ export function Testimonials() {
         <p className="text-center text-white/60 mb-12 text-lg">
           Reseñas 100% reales* de publicaciones 100% existentes*
         </p>
+
+        <VideoTestimonials/>
 
         <div className="grid sm:grid-cols-2 gap-6">
           {TESTIMONIALS.map((t) => (

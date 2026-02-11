@@ -1,14 +1,22 @@
+import Image from 'next/image'
+
 export function Footer() {
   return (
     <footer className="py-12 px-4 border-t border-gold/10">
       <div className="max-w-4xl mx-auto text-center space-y-6">
         <a
-          href="https://savvily.es/libros/software-cafrers/"
+          href="https://savvily.es/?utm_source=softwarecafrers"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-gold text-navy font-black text-lg px-8 py-4 rounded-lg hover:bg-gold-dark transition-all hover:scale-105"
+          className="inline-block hover:opacity-80 transition-opacity"
         >
-          COMPRAR SOFTWARE CAFRERS
+          <Image
+            src="/savvily.png"
+            alt="Savvily - Conocimiento que compartir"
+            width={200}
+            height={100}
+            className="w-auto h-10 mx-auto"
+          />
         </a>
 
         <div className="text-white/50 text-sm space-y-2">
@@ -72,7 +80,7 @@ export function Footer() {
           <p>
             Publicado por{' '}
             <a
-              href="https://savvily.es/"
+              href="https://savvily.es/?utm_source=softwarecafrers"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gold/60 hover:text-gold underline underline-offset-4 transition-colors"
@@ -91,7 +99,6 @@ export function Footer() {
         <div className="pt-4 border-t border-gold/5">
           <p className="text-white/15 text-xs">
             &copy; {new Date().getFullYear()} César Alberca. Todos los derechos reservados. Publicado por Savvily.
-            Ningún código fue mejorado durante la producción de este sitio web.
           </p>
         </div>
       </div>

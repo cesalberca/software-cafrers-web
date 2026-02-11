@@ -7,7 +7,7 @@ const NAV_ITEMS = [
   { label: 'Autor', href: '#autor' },
   { label: 'Contenido', href: '#contenido' },
   { label: 'Testimonios', href: '#testimonios' },
-  { label: 'Muestra', href: '#muestra' },
+  { label: 'Muestra', href: '#muestra', superheading: 'Gratis' },
   { label: 'FAQ', href: '#faq' },
 ]
 
@@ -35,8 +35,9 @@ export function Header() {
       } ${scrolled ? 'bg-navy/95 backdrop-blur-md shadow-lg shadow-black/20 border-b border-gold/10' : 'bg-transparent'}`}
     >
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-14">
-        <a href="#" className="text-gold font-black text-sm sm:text-base tracking-tight">
-          Software Cafrers
+        <a href="#" className="text-gold font-black text-sm sm:text-base tracking-tight leading-tight">
+          <span>Software Cafrers</span>
+          <span className="block text-[0.55rem] sm:text-[0.6rem] text-white font-medium tracking-normal">Haciendo Código que Haría Vomitar a una Cabra</span>
         </a>
 
         <nav className="hidden sm:flex items-center gap-1">
@@ -44,15 +45,20 @@ export function Header() {
             <a
               key={item.href}
               href={item.href}
-              className="text-white/60 hover:text-gold text-sm px-3 py-1.5 rounded-lg hover:bg-gold/5 transition-all"
+              className="relative text-white/60 hover:text-gold text-sm px-3 py-1.5 rounded-lg hover:bg-gold/5 transition-all"
             >
+              {'superheading' in item && item.superheading && (
+                <span className="absolute -top-0.5 left-10 text-[0.55rem] font-bold text-gold bg-navy-dark/80 px-1.5 py-0 rounded-sm leading-tight">
+                  {item.superheading}
+                </span>
+              )}
               {item.label}
             </a>
           ))}
         </nav>
 
         <a
-          href="https://savvily.es/libros/software-cafrers/"
+          href="https://savvily.es/libros/software-cafrers/?utm_source=softwarecafrers"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-gold text-navy font-bold text-xs sm:text-sm px-4 py-1.5 rounded-lg hover:bg-gold-dark transition-all"

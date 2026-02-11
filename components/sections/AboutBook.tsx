@@ -49,7 +49,7 @@ export function AboutBook() {
 
             <div className="pt-4">
               <a
-                href="https://savvily.es/libros/software-cafrers/"
+                href="https://savvily.es/libros/software-cafrers/?utm_source=softwarecafrers"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-gold text-navy font-bold px-6 py-3 rounded-lg hover:bg-gold-dark transition-all hover:scale-105"

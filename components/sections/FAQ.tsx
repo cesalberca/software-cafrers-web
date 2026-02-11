@@ -1,8 +1,10 @@
 'use client'
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+import { Link } from '@/components/ui/link'
+import { ReactNode } from 'react'
 
-const FAQ_ITEMS = [
+const FAQ_ITEMS: { question: string; answer: ReactNode }[] = [
   {
     question: '¿Es este libro para mí?',
     answer:
@@ -40,18 +42,38 @@ const FAQ_ITEMS = [
   },
   {
     question: '¿Quién hizo las ilustraciones?',
-    answer:
-      'Las increíbles (y muy pacientes) ilustraciones son obra de Marta Aldarias Villacañas. Puedes ver más de su trabajo en aldariasart.es o en Instagram como @aldarias_art. Ella no tiene la culpa de nada.',
+    answer: (
+      <>
+        Las increíbles (y muy pacientes) ilustraciones son obra de Marta Aldarias Villacañas. Puedes ver más de su trabajo en{' '}
+        <Link href="https://aldariasart.es" className="text-gold hover:text-gold-light underline underline-offset-4 transition-colors">
+          aldariasart.es
+        </Link>{' '}
+        o en Instagram como{' '}
+        <Link href="https://instagram.com/aldarias_art" className="text-gold hover:text-gold-light underline underline-offset-4 transition-colors">
+          @aldarias_art
+        </Link>
+        . Ella no tiene la culpa de nada.
+      </>
+    ),
   },
   {
     question: '¿Por qué 42a edición?',
-    answer:
-      'Porque 42 es la respuesta a la vida, el universo y todo lo demás. Y también es el número de países donde las estructuras de código de este libro son ilegales. ¿Coincidencia? Sí, totalmente.',
+    answer: (
+      <>
+        Porque 42 es{' '}
+        <Link
+          href="https://es.wikipedia.org/wiki/El_sentido_de_la_vida,_el_universo_y_todo_lo_dem%C3%A1s"
+          className="text-gold hover:text-gold-light underline underline-offset-4 transition-colors"
+        >
+          la respuesta a la vida, el universo y todo lo demás
+        </Link>
+        . Y también es el número de países donde las estructuras de código de este libro son ilegales. ¿Coincidencia? Sí, totalmente.
+      </>
+    ),
   },
   {
-    question: '¿Hay sequel?',
-    answer:
-      'Está en proceso. Se titulará "Software Cafrers 2: El Merge Conflict" y cubrirá temas avanzados como poner passwords en el README y hacer deploy con FTP. No realmente. ¿O sí?',
+    question: '¿Hay secuelas?',
+    answer: 'Sí, muchas.',
   },
 ]
 

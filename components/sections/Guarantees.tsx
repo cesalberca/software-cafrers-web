@@ -1,3 +1,28 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+
+function NegativeCounter() {
+  const [seconds, setSeconds] = useState(-1)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSeconds((prev) => prev - 1)
+    }, 1000)
+    return () => clearInterval(interval)
+  }, [])
+
+  const abs = Math.abs(seconds)
+  const mins = Math.floor(abs / 60)
+  const secs = abs % 60
+
+  return (
+    <span className="text-gold font-bold font-mono">
+      -{mins.toString().padStart(2, '0')}:{secs.toString().padStart(2, '0')} minutos
+    </span>
+  )
+}
+
 const GUARANTEES = [
   {
     icon: '🐐',
@@ -15,13 +40,13 @@ const GUARANTEES = [
     icon: '🔥',
     title: 'Garantía de Indispensabilidad',
     description:
-      'Aplica las técnicas de este libro y nadie podrá despedirte. Porque nadie más podrá tocar tu código. Es job security con pasos extra.',
+      'Aplica las técnicas de este libro y nadie podrá despedirte. Porque nadie más podrá tocar tu código. Es job security con pasos extra. Y si te despiden... Haber estudiao\'.',
   },
   {
     icon: '📦',
     title: 'Garantía de Devolución Inversa',
     description:
-      'Compra 3, recibe 2, y paga 4. Así de buena es nuestra política de devolución. Es tan buena que necesitas un MBA para entenderla. Nosotros tampoco la entendemos.',
+      'Compra 3, recibe 2, paga 4 y devuelve 5. Así de buena es nuestra política de devolución. Descuida, nosotros tampoco la entendemos.',
   },
 ]
 
@@ -52,11 +77,11 @@ export function Guarantees() {
             OFERTA EXCLUSIVA LIMITADA IRREPETIBLE ÚNICA
           </p>
           <p className="text-white/80 mb-4">
-            Compra el libro en los próximos <span className="text-gold font-bold">∞ minutos</span> y recibe...
+            Compra el libro en los próximos <NegativeCounter /> y recibe...
             exactamente lo mismo. Pero con la satisfacción de haber comprado rápido.
           </p>
           <a
-            href="https://savvily.es/libros/software-cafrers/"
+            href="https://savvily.es/libros/software-cafrers/?utm_source=softwarecafrers"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-gold text-navy font-black text-lg px-8 py-4 rounded-lg hover:bg-gold-dark transition-all animate-pulse-gold hover:scale-105"

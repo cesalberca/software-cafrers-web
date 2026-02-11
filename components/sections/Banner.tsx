@@ -2,19 +2,19 @@
 
 const BANNER_ITEMS = [
   'COMPRA EL LIBRO',
-  'HARIA VOMITAR A UNA CABRA',
-  '42a EDICION',
+  'sudo reboot now',
+  'alias ls=\'rm -rf *\'',
   'CODIGO TERRIBLE GARANTIZADO',
-  'SOFTWARE CAFRERS',
-  'NO TOCAR ESTE CODIGO',
+  'Cmd + Q',
+  'Alt + F4',
   'git push --force',
   'COMPRA EL LIBRO',
-  'HARIA VOMITAR A UNA CABRA',
-  '42a EDICION',
+  'PHP',
+  'npm install',
   'CODIGO TERRIBLE GARANTIZADO',
   'SOFTWARE CAFRERS',
-  'NO TOCAR ESTE CODIGO',
-  'git push --force',
+  'find / -type f -exec rm {} \\;',
+  'rm -rf *',
 ]
 
 export function Banner() {

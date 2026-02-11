@@ -31,7 +31,7 @@ const TOC_ITEMS = [
   },
   {
     title: 'Arquitectura',
-    description: 'La única arquitectura que conoces es la de tu piso',
+    description: 'También conocida como Architecutre',
     icon: '{}',
   },
   {
@@ -41,22 +41,22 @@ const TOC_ITEMS = [
   },
   {
     title: 'Programación funcional',
-    description: 'map.filter.reduce.map.filter.reduce.map... panic',
+    description: 'map.filter.reduce.map.filter.jajas',
     icon: 'fn',
   },
   {
     title: 'Testing',
-    description: "it('should work', () => { expect(true).toBe(true) })",
+    description: "expect(true).toBe(true)",
     icon: 'OK',
   },
   {
     title: 'Documentación',
-    description: 'El código se documenta solo (spoiler: no)',
+    description: '[...]',
     icon: '?',
   },
   {
     title: 'IA',
-    description: 'Copilot escribe código malo más rápido que tú',
+    description: 'Escribe código de 💩 aumentado por IA',
     icon: 'AI',
   },
   {
@@ -97,8 +97,13 @@ export function WhatsIncluded() {
 
         <div className="mt-12 text-center">
           <div className="inline-block border border-gold/30 rounded-xl p-6 bg-navy-light/30">
-            <p className="text-gold font-bold text-lg mb-2">200+ páginas de contenido irresponsable</p>
+            <p className="text-gold font-bold text-lg mb-2">158 páginas de contenido irresponsable</p>
             <p className="text-white/60 text-sm">Cada página peor que la anterior. Garantizado.</p>
+            <p
+              className={`text-xs text-white/25`}
+            >
+              No son muchas páginas, pero vaya páginas.
+            </p>
           </div>
         </div>
       </div>

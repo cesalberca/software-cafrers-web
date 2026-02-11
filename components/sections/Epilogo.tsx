@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export function Epilogo() {
   return (
-    <section className="py-20 px-4 bg-pattern-code">
+    <section className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gold mb-12 text-center">Epílogo</h2>
 
@@ -38,8 +38,7 @@ export function Epilogo() {
             </p>
 
             <p className="text-lg text-white/90 leading-relaxed">
-              Adrián tuvo el honor (o la desgracia) de cerrar este libro con unas palabras que, esperamos, compensen un
-              poco el daño causado por los capítulos anteriores. Spoiler: no lo compensan.
+              Adrián confabuló la idea una charla que más tarde inspiraría la creación de este libro. Por tanto, en caso de hate o repercusiones legales debemos responsabilizarlo a él.
             </p>
 
             <div className="border border-gold/20 rounded-xl p-6 bg-navy-light/30">
