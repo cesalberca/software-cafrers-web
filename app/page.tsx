@@ -6,6 +6,7 @@ import { Prologo } from '@/components/sections/Prologo'
 import { AboutAuthor } from '@/components/sections/AboutAuthor'
 import { Epilogo } from '@/components/sections/Epilogo'
 import { Editorial } from '@/components/sections/Editorial'
+import { FollowUs } from '@/components/sections/FollowUs'
 import { WhatsIncluded } from '@/components/sections/WhatsIncluded'
 import { VideoTestimonials } from '@/components/sections/VideoTestimonials'
 import { Testimonials } from '@/components/sections/Testimonials'
@@ -44,6 +45,8 @@ export default function Home() {
       <Epilogo />
 
       <Editorial />
+
+      <FollowUs />
 
       <WhatsIncluded />
 

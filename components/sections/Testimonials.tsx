@@ -18,23 +18,6 @@ const TESTIMONIALS = [
     quote: 'Una obra que redefine el concepto de "publicable".',
     author: 'The Washingon Post',
   },
-  {
-    quote: 'Inapetente incluso para rumiantes.',
-    author: 'National Geographyc',
-  },
-  {
-    quote:
-      'Lo dejé en la oficina y al día siguiente teníamos tres tickets de Jira menos. No sé si es por el libro o porque alguien se fue.',
-    author: 'Un Scrum Master Anónimo',
-  },
-  {
-    quote: 'Prefiero hacer pair programming con una cabra que volver a leer este libro.',
-    author: 'Un reviewer de Googol',
-  },
-  {
-    quote: 'Mi terapeuta dice que no debería leerlo. Mi terapeuta no sabe JavaScript.',
-    author: 'Paciente 0 del burnout',
-  },
 ]
 
 export function Testimonials() {
@@ -54,6 +37,24 @@ export function Testimonials() {
           {TESTIMONIALS.map((t) => (
             <TestimonialCard key={t.author} quote={t.quote} author={t.author} />
           ))}
+        </div>
+
+        <div className="mt-10 text-center border border-dashed border-gold/20 rounded-xl p-6 max-w-xl mx-auto bg-navy-light/10">
+          <p className="text-gold font-bold text-lg mb-2">
+            ¿Has leído el libro? ¡Deja tu reseña!
+          </p>
+          <p className="text-white/60 text-sm mb-4">
+            Envíanos tu testimonio y puede que aparezca aquí.
+          </p>
+          <a
+            href="mailto:software.cafrers@cesalberca.com?subject=Testimonio%20Software%20Cafrers"
+            className="inline-flex items-center gap-2 text-gold hover:text-gold-light font-bold text-sm underline underline-offset-4 transition-colors"
+          >
+            Enviar testimonio
+          </a>
+          <p className="text-white/30 text-xs mt-3">
+            La cabra se reserva el derecho de editar tu reseña para hacerla más dramática.
+          </p>
         </div>
 
         <p className="text-center text-white/30 text-xs mt-8">

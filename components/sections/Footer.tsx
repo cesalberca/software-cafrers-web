@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { SocialLinks } from '@/components/SocialLinks'
 
 export function Footer() {
   return (
@@ -95,6 +96,8 @@ export function Footer() {
           irrelevante. Todas las reseñas son ficticias. Los nombres de las publicaciones están mal escritos a propósito.
           Si has llegado hasta aquí, probablemente deberías comprar el libro.
         </p>
+
+        <SocialLinks className="pt-2" />
 
         <div className="pt-4 border-t border-gold/5">
           <p className="text-white/15 text-xs">

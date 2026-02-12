@@ -1,14 +1,14 @@
 const COMPANIES = [
-  { name: 'Googol', tagline: "Don't be evil (a veces)" },
-  { name: 'Macrosoft', tagline: 'Where do you want to crash today?' },
-  { name: 'Amazón', tagline: 'Tu paquete llega antes que tu deploy' },
-  { name: 'Facebuuk', tagline: 'Connecting bugs' },
-  { name: 'Netflax', tagline: 'Streaming de errores 24/7' },
-  { name: 'Spootify', tagline: 'Escucha el sonido de tu build fallando' },
-  { name: 'Twittor', tagline: '280 caracteres de código horrible' },
-  { name: 'SlackOff', tagline: 'Donde la productividad va a morir' },
-  { name: 'GitRub', tagline: 'Push, pray, repeat' },
-  { name: 'StackOverflood', tagline: 'Copia y reza' },
+  { name: 'Googol' },
+  { name: 'Macrosoft' },
+  { name: 'Amazón' },
+  { name: 'Facebuuk' },
+  { name: 'Netflax' },
+  { name: 'Spootify' },
+  { name: 'Twittor' },
+  { name: 'SlackOff' },
+  { name: 'GitRub' },
+  { name: 'StackOverflood' },
 ]
 
 function CompanyLogo({ company }: { company: (typeof COMPANIES)[number] }) {
@@ -16,9 +16,6 @@ function CompanyLogo({ company }: { company: (typeof COMPANIES)[number] }) {
     <div className="flex flex-col items-center justify-center p-4 opacity-40 hover:opacity-80 transition-opacity duration-300 group">
       <div className="text-white/70 font-black text-base sm:text-lg tracking-tight group-hover:text-gold transition-colors">
         {company.name}
-      </div>
-      <div className="text-white/30 text-[10px] mt-0.5 group-hover:text-white/50 transition-colors">
-        {company.tagline}
       </div>
     </div>
   )
@@ -36,6 +33,24 @@ export function CompanyLogos() {
           {COMPANIES.map((company) => (
             <CompanyLogo key={company.name} company={company} />
           ))}
+        </div>
+
+        <div className="mt-10 text-center border border-dashed border-gold/20 rounded-xl p-6 max-w-xl mx-auto bg-navy-light/10">
+          <p className="text-gold font-bold text-lg mb-2">
+            ¿Quieres tu logo aquí?
+          </p>
+          <p className="text-white/60 text-sm mb-4">
+            Si tu empresa quiere aparecer en esta prestigiosa lista (real o ficticia), escríbenos. De momento es gratis.
+          </p>
+          <a
+            href="mailto:software.cafrers@cesalberca.com?subject=Logo%20en%20Software%20Cafrers"
+            className="inline-flex items-center gap-2 text-gold hover:text-gold-light font-bold text-sm underline underline-offset-4 transition-colors"
+          >
+            Contactar
+          </a>
+          <p className="text-white/30 text-xs mt-3">
+            No garantizamos que escribamos bien el nombre de tu empresa.
+          </p>
         </div>
 
         <p className="text-center text-white/15 text-xs mt-8">

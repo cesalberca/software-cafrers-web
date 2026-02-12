@@ -31,7 +31,7 @@ export function BuySection() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(252,193,70,0.06)_0%,_transparent_70%)]" />
 
       {/* Left goat */}
-      <div className="absolute left-4 sm:left-12 bottom-0 opacity-60">
+      <div className="hidden sm:block absolute left-4 sm:left-12 bottom-0 opacity-60">
         <Image
           src="/left-goat.svg"
           alt=""
@@ -43,7 +43,7 @@ export function BuySection() {
       </div>
 
       {/* Right goat */}
-      <div className="absolute right-4 sm:right-12 bottom-0 opacity-60">
+      <div className="hidden sm:block absolute right-4 sm:right-12 bottom-0 opacity-60">
         <Image
           src="/right-goat.svg"
           alt=""

@@ -83,6 +83,26 @@ export function VideoTestimonials() {
           <VideoCard key={video.id} video={video} />
         ))}
       </div>
+
+      <div className="mt-10 text-center border border-dashed border-gold/20 rounded-xl p-6 max-w-xl mx-auto bg-navy-light/10">
+        <p className="text-gold font-bold text-lg mb-2">
+          ¿Has leído el libro? ¡Grábate!
+        </p>
+        <p className="text-white/60 text-sm mb-4">
+          Envía un vídeo en <span className="text-gold/80 font-medium">formato horizontal</span> hablando del libro de la forma más graciosa que puedas.
+        </p>
+
+        <a
+          href="mailto:software.cafrers@cesalberca.com?subject=V%C3%ADdeo%20testimonio%20Software%20Cafrers"
+          className="inline-flex items-center gap-2 text-gold hover:text-gold-light font-bold text-sm underline underline-offset-4 transition-colors"
+        >
+          Enviar vídeo
+        </a>
+
+        <p className="text-white/30 text-xs mt-3">
+          Los mejores vídeos aparecerán aquí. La cabra selecciona personalmente.
+        </p>
+      </div>
     </div>
   )
 }

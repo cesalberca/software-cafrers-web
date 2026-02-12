@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Image from 'next/image'
+import { SocialLinks } from '@/components/SocialLinks'
 
 const CODE_SNIPPETS = [
   'if(x==true==false){',
@@ -233,7 +234,7 @@ export function Hero() {
 
           {/* Left goat */}
           <div
-            className={`absolute left-0 bottom-0 sm:bottom-4 z-0 transition-transform duration-700 ease-out ${
+            className={`hidden sm:block absolute left-0 bottom-0 sm:bottom-4 z-0 transition-transform duration-700 ease-out ${
               showGoats ? 'translate-x-0' : '-translate-x-[200%]'
             }`}
           >
@@ -259,7 +260,7 @@ export function Hero() {
 
           {/* Right goat */}
           <div
-            className={`absolute right-0 bottom-0 sm:bottom-4 z-0 transition-transform duration-700 ease-out ${
+            className={`hidden sm:block absolute right-0 bottom-0 sm:bottom-4 z-0 transition-transform duration-700 ease-out ${
               showGoats ? 'translate-x-0' : 'translate-x-[200%]'
             }`}
           >
@@ -329,6 +330,12 @@ export function Hero() {
           >
             *Mentira, pero necesitamos las ventas y esto suele funcionar.
           </p>
+
+          <SocialLinks
+            className={`mt-4 transition-all duration-700 delay-700 ${
+              showText ? 'opacity-100' : 'opacity-0'
+            }`}
+          />
         </div>
       </div>
 
