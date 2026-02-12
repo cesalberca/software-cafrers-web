@@ -27,6 +27,7 @@ export function PeskyModal() {
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setDismissed(true)} />
       <div className="relative bg-navy-light border-2 border-gold/40 rounded-2xl p-8 max-w-md w-full shadow-2xl animate-bounce-in">
         <button
+          type="button"
           onClick={() => setDismissed(true)}
           className="absolute top-3 right-4 text-white/40 hover:text-white text-xl"
           aria-label="Cerrar"
@@ -36,11 +37,11 @@ export function PeskyModal() {
 
         <div className="text-center">
           <div className="text-5xl mb-4">🐐</div>
-          <h3 className="text-gold font-black text-2xl mb-2">¡ESPERA!</h3>
-          <p className="text-white/80 mb-2">¿Te vas sin comprar el libro?</p>
+          <h3 className="text-gold font-black text-2xl mb-2">¡SOY UNA MODAL SIN MODALES!</h3>
+          <p className="text-white/80 mb-2">¿Ya vas por la mitad de la página y no has comprado el libro?</p>
           <p className="text-white/60 text-sm mb-6">
-            Son solo <span className="text-gold font-bold">158 páginas</span> de puro desastre profesional. Tu código ya
-            es malo, ¿por qué no hacerlo oficial?
+            Tu código ya
+            es malo, <span className="text-gold font-bold">¿por qué no hacerlo oficial?</span>
           </p>
 
           <a

@@ -52,9 +52,6 @@ export function AboutAuthor() {
                 height={400}
                 className="rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-2 border-gold/20"
               />
-              <div className="absolute -bottom-4 -left-4 bg-gold text-navy font-bold text-xs px-3 py-2 rounded-lg -rotate-3">
-                Sí, suelo programar con los brazos cruzados.
-              </div>
             </div>
           </div>
         </div>

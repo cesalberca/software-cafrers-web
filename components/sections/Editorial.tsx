@@ -36,8 +36,7 @@ export function Editorial() {
 
         <div className="border border-gold/20 rounded-xl p-8 bg-navy-light/30 max-w-2xl mx-auto">
           <p className="text-white/70 italic text-sm mb-4">
-            &quot;Cuando César nos envió el manuscrito, pensamos que era una broma. Luego vimos que iba en serio. Y
-            luego vimos las ventas. A veces el mercado premia lo que la dignidad castiga.&quot;
+            &quot;Cuando César nos envió el manuscrito, el antivirus saltó, vimos entonces el potencial de que se expandiese como una plaga. A veces el mercado premia lo que la dignidad castiga.&quot;
           </p>
           <p className="text-gold text-sm font-bold">&mdash; Departamento editorial de Savvily</p>
         </div>
