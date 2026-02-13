@@ -3,6 +3,8 @@
 import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import { playGoatSound } from '@/lib/goat-sound'
+import { BuyLink } from '@/components/BuyLink'
+import { trackGoal } from '@/lib/fathom-goals'
 
 const GOAT_MESSAGES = [
   '¡Beeeh! ¡Compra el libro ya!',
@@ -64,6 +66,7 @@ export function GoatChatbot() {
     playGoatSound()
     if (!isOpen) {
       getRandomMessage()
+      trackGoal('chatbotOpen')
     }
   }
 
@@ -75,13 +78,14 @@ export function GoatChatbot() {
   return (
     <div className="fixed bottom-4 right-4 z-50 flex flex-col items-end gap-2">
       {showBubble && !isOpen && (
-        <div
-          className="bg-gold text-navy rounded-2xl rounded-br-sm p-3 max-w-[250px] shadow-lg animate-bounce-in cursor-pointer"
+        <button
+          type="button"
+          className="bg-gold text-navy rounded-2xl rounded-br-sm p-3 max-w-[250px] shadow-lg animate-bounce-in cursor-pointer text-left"
           onClick={handleDismissBubble}
         >
           <p className="text-sm font-bold">{message}</p>
           <div className="text-xs text-navy/60 mt-1">Click para callar a la cabra</div>
-        </div>
+        </button>
       )}
 
       {isOpen && (
@@ -95,6 +99,7 @@ export function GoatChatbot() {
               </div>
             </div>
             <button
+              type="button"
               onClick={handleToggle}
               className="text-white/50 hover:text-white text-lg leading-none"
               aria-label="Cerrar chat de la cabra"
@@ -120,15 +125,11 @@ export function GoatChatbot() {
           </div>
 
           <div className="p-3 border-t border-gold/20">
-            <a
-              href="https://savvily.es/libros/software-cafrers/?utm_source=softwarecafrers"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full bg-gold text-navy font-black text-center py-3 rounded-lg hover:bg-gold-dark transition-all animate-urgent-pulse"
-            >
+            <BuyLink goal="buyChatbot" size="lg" layout="block" animation="urgent">
               VALE, COMPRO 🐐
-            </a>
+            </BuyLink>
             <button
+              type="button"
               onClick={() => {
                 getRandomMessage()
               }}
@@ -141,6 +142,7 @@ export function GoatChatbot() {
       )}
 
       <button
+        type="button"
         onClick={handleToggle}
         className="w-16 h-16 rounded-full bg-navy-light shadow-lg shadow-gold/30 hover:shadow-gold/50 border-2 border-gold transition-all animate-goat-bounce hover:scale-110 flex items-center justify-center relative"
         aria-label="Abrir chat de la cabra para comprar el libro"

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import './globals.css'
-import { FathomAnalytics } from '@/app/fathom'
+import { FathomAnalytics } from '@/components/Fathom'
 
 const montserrat = Montserrat({
   variable: '--font-montserrat-sans',
@@ -68,6 +68,7 @@ export default function RootLayout({
         <link rel="canonical" href="https://savvily.es/libros/software-cafrers/" />
         <script
           type="application/ld+json"
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data requires dangerouslySetInnerHTML
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
@@ -93,6 +94,7 @@ export default function RootLayout({
             }),
           }}
         />
+        <title>Software Cafrers: Haciendo Código que Haría Vomitar a una Cabra</title>
       </head>
 
       <body className={`${montserrat.variable} antialiased`}>

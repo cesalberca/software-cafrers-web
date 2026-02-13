@@ -1,3 +1,5 @@
+import { TrackedLink } from '@/components/TrackedLink'
+
 export function FreeSample() {
   return (
     <section id="muestra" className="py-20 px-4 bg-pattern-code">
@@ -12,14 +14,12 @@ export function FreeSample() {
           <div className="text-6xl mb-4">📄</div>
           <p className="text-white/80 font-medium mb-2">Capítulo de muestra en PDF</p>
           <p className="text-white/50 text-sm mb-6">Nada de pirateo que me cabreo</p>
-          <a
+          <TrackedLink
             href="https://savvily.es/libros/software-cafrers/muestra-software-cafrers.pdf?utm_source=softwarecafrers"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-transparent border-2 border-gold text-gold font-bold px-6 py-3 rounded-lg hover:bg-gold hover:text-navy transition-all"
+            goal="sampleDownload"
           >
             Descargar Muestra Gratis
-          </a>
+          </TrackedLink>
         </div>
       </div>
     </section>

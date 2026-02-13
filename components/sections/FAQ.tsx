@@ -2,7 +2,7 @@
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { Link } from '@/components/ui/link'
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 const FAQ_ITEMS: { question: string; answer: ReactNode }[] = [
   {
@@ -93,10 +93,10 @@ export function FAQ() {
         <p className="text-center text-white/60 mb-12 text-lg">Respuestas que no pediste a preguntas que no hiciste</p>
 
         <Accordion type="single" collapsible className="space-y-3">
-          {FAQ_ITEMS.map((item, i) => (
+          {FAQ_ITEMS.map((item) => (
             <AccordionItem
-              key={i}
-              value={`item-${i}`}
+              key={item.question}
+              value={item.question}
               className="border border-gold/10 rounded-xl px-6 bg-navy-light/20 data-[state=open]:border-gold/30 transition-colors"
             >
               <AccordionTrigger className="text-white hover:text-gold text-left font-medium py-4 [&[data-state=open]]:text-gold">

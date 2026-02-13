@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { BuyLink } from '@/components/BuyLink'
 
 function NegativeCounter() {
   const [seconds, setSeconds] = useState(-1)
@@ -80,14 +81,9 @@ export function Guarantees() {
             Compra el libro en los próximos <NegativeCounter /> y recibe... exactamente lo mismo. Pero con la
             satisfacción de haber comprado rápido.
           </p>
-          <a
-            href="https://savvily.es/libros/software-cafrers/?utm_source=softwarecafrers"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-gold text-navy font-black text-lg px-8 py-4 rounded-lg hover:bg-gold-dark transition-all animate-pulse-gold hover:scale-105"
-          >
+          <BuyLink goal="buyGuarantees" size="lg" animation="pulse" withScale>
             COMPRAR ANTES DE QUE SEA TARDE***
-          </a>
+          </BuyLink>
         </div>
 
         <p className="text-center text-white/20 text-xs mt-6">

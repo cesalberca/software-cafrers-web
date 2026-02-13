@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { trackGoal } from '@/lib/fathom-goals'
+import { BuyLink } from '@/components/BuyLink'
 
 export function PeskyModal() {
   const [show, setShow] = useState(false)
@@ -20,15 +22,31 @@ export function PeskyModal() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [dismissed])
 
+  useEffect(() => {
+    if (show && !dismissed) {
+      trackGoal('modalShown')
+    }
+  }, [show, dismissed])
+
+  const dismissModal = () => {
+    trackGoal('modalDismiss')
+    setDismissed(true)
+  }
+
   if (!show || dismissed) return null
 
   return (
     <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setDismissed(true)} />
+      <button
+        type="button"
+        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+        onClick={dismissModal}
+        aria-label="Cerrar"
+      />
       <div className="relative bg-navy-light border-2 border-gold/40 rounded-2xl p-8 max-w-md w-full shadow-2xl animate-bounce-in">
         <button
           type="button"
-          onClick={() => setDismissed(true)}
+          onClick={dismissModal}
           className="absolute top-3 right-4 text-white/40 hover:text-white text-xl"
           aria-label="Cerrar"
         >
@@ -43,17 +61,13 @@ export function PeskyModal() {
             Tu código ya es malo, <span className="text-gold font-bold">¿por qué no hacerlo oficial?</span>
           </p>
 
-          <a
-            href="https://savvily.es/libros/software-cafrers/?utm_source=softwarecafrers"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full bg-gold text-navy font-black text-lg py-4 rounded-xl hover:bg-gold-dark transition-all animate-pulse-gold mb-3"
-          >
+          <BuyLink goal="buyModal" size="lg" layout="block" animation="pulse" className="mb-3">
             COMPRAR POR FAVOR 🐐
-          </a>
+          </BuyLink>
 
           <button
-            onClick={() => setDismissed(true)}
+            type="button"
+            onClick={dismissModal}
             className="text-white/30 text-xs hover:text-white/50 transition-colors"
           >
             No gracias, prefiero seguir escribiendo código horrible sin ayuda profesional

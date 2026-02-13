@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Image from 'next/image'
 import { SocialLinks } from '@/components/SocialLinks'
+import { BuyLink } from '@/components/BuyLink'
 
 const CODE_SNIPPETS = [
   'if(x==true==false){',
@@ -106,7 +107,7 @@ function VomitCode({ fading }: { fading: boolean }) {
 }
 
 function Book3D() {
-  const containerRef = useRef<HTMLDivElement>(null)
+  const containerRef = useRef<HTMLButtonElement>(null)
   const [rotation, setRotation] = useState({ x: 3, y: -12 })
   const [isFlipped, setIsFlipped] = useState(false)
 
@@ -129,13 +130,15 @@ function Book3D() {
   }, [])
 
   return (
-    <div
+    <button
+      type="button"
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
       className="cursor-pointer"
       style={{ perspective: '1200px' }}
+      aria-label="Girar portada del libro"
     >
       <div
         className="relative w-56 sm:w-72 md:w-80 transition-transform duration-700 ease-out"
@@ -186,7 +189,7 @@ function Book3D() {
           }}
         />
       </div>
-    </div>
+    </button>
   )
 }
 
@@ -303,14 +306,9 @@ export function Hero() {
               showText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
           >
-            <a
-              href="https://savvily.es/libros/software-cafrers/?utm_source=softwarecafrers"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-gold text-navy font-black text-lg sm:text-xl px-10 py-4 rounded-xl hover:bg-gold-dark transition-all animate-pulse-gold hover:scale-105 shadow-lg shadow-gold/20"
-            >
+            <BuyLink goal="buyHero" size="xl" animation="pulse" withScale withShadow className="gap-3">
               COMPRAR AHORA
-            </a>
+            </BuyLink>
             <div className="flex flex-col items-start gap-1">
               <span className="text-sm text-white/50 animate-urgent-pulse">
                 Solo quedan <u>42 copias</u>*

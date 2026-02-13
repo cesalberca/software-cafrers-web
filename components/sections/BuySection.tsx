@@ -2,6 +2,7 @@
 
 import { useState, useRef, useCallback } from 'react'
 import Image from 'next/image'
+import { BuyLink } from '@/components/BuyLink'
 
 export function BuySection() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -24,6 +25,7 @@ export function BuySection() {
   return (
     <section
       ref={sectionRef}
+      role="application"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       className="relative min-h-screen flex items-center justify-center overflow-hidden px-4"
@@ -56,18 +58,18 @@ export function BuySection() {
 
       <div className="relative z-10 text-center">
         <p className="text-white/60 text-lg sm:text-xl mb-6">Ya has leído suficiente. Es hora.</p>
-        <a
-          href="https://savvily.es/libros/software-cafrers/?utm_source=softwarecafrers"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 bg-gold text-navy font-black text-xl sm:text-2xl px-12 py-5 rounded-xl hover:bg-gold-dark transition-all animate-pulse-gold shadow-lg shadow-gold/30"
+        <BuyLink
+          goal="buySection"
+          animation="pulse"
+          withShadow
+          className="inline-flex items-center gap-3 font-black text-xl sm:text-2xl px-12 py-5 rounded-xl shadow-gold/30"
           style={{
             transform: `translate(${offset.x}px, ${offset.y}px)`,
             transition: 'transform 0.3s ease-out',
           }}
         >
           COMPRAR SOFTWARE CAFRERS
-        </a>
+        </BuyLink>
         <p className="text-white/30 text-xs mt-6">La cabra te lo agradecerá. O no. Pero tú sí.</p>
       </div>
     </section>

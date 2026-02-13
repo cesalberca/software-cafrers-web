@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { trackGoal } from '@/lib/fathom-goals'
 
 const VIDEOS = [
   {
@@ -31,6 +32,7 @@ function PlayButton() {
           className="w-6 h-6 text-white ml-1 group-hover:text-navy transition-colors"
           fill="currentColor"
           viewBox="0 0 24 24"
+          aria-hidden="true"
         >
           <path d="M8 5v14l11-7z" />
         </svg>
@@ -43,9 +45,18 @@ function VideoCard({ video }: { video: (typeof VIDEOS)[number] }) {
   const [playing, setPlaying] = useState(false)
 
   return (
-    <div
-      className="group relative rounded-2xl overflow-hidden border border-gold/10 hover:border-gold/30 transition-all cursor-pointer"
-      onClick={() => setPlaying(!playing)}
+    <button
+      type="button"
+      className="group relative rounded-2xl overflow-hidden border border-gold/10 hover:border-gold/30 transition-all cursor-pointer text-left w-full"
+      onClick={() =>
+        setPlaying((prev) => {
+          const next = !prev
+          if (next) {
+            trackGoal('videoPlay')
+          }
+          return next
+        })
+      }
     >
       <div className={`aspect-[9/16] ${video.thumbnail} relative`}>
         <div className="absolute inset-0 bg-navy-dark/30" />
@@ -66,12 +77,12 @@ function VideoCard({ video }: { video: (typeof VIDEOS)[number] }) {
       </div>
       <div className="absolute top-3 right-3">
         <div className="w-8 h-8 bg-black/40 rounded-full flex items-center justify-center backdrop-blur-sm">
-          <svg className="w-4 h-4 text-white/70" fill="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 text-white/70" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
           </svg>
         </div>
       </div>
-    </div>
+    </button>
   )
 }
 
