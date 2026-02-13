@@ -36,9 +36,7 @@ export function CompanyLogos() {
         </div>
 
         <div className="mt-10 text-center border border-dashed border-gold/20 rounded-xl p-6 max-w-xl mx-auto bg-navy-light/10">
-          <p className="text-gold font-bold text-lg mb-2">
-            ¿Quieres tu logo aquí?
-          </p>
+          <p className="text-gold font-bold text-lg mb-2">¿Quieres tu logo aquí?</p>
           <p className="text-white/60 text-sm mb-4">
             Si tu empresa quiere aparecer en esta prestigiosa lista (real o ficticia), escríbenos. De momento es gratis.
           </p>
@@ -48,9 +46,7 @@ export function CompanyLogos() {
           >
             Contactar
           </a>
-          <p className="text-white/30 text-xs mt-3">
-            No garantizamos que escribamos bien el nombre de tu empresa.
-          </p>
+          <p className="text-white/30 text-xs mt-3">No garantizamos que escribamos bien el nombre de tu empresa.</p>
         </div>
 
         <p className="text-center text-white/15 text-xs mt-8">

@@ -37,7 +37,9 @@ export function Header() {
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-14">
         <a href="#" className="text-gold font-black text-sm sm:text-base tracking-tight leading-tight">
           <span>Software Cafrers</span>
-          <span className="block text-[0.55rem] sm:text-[0.6rem] text-white font-medium tracking-normal">Haciendo Código que Haría Vomitar a una Cabra</span>
+          <span className="block text-[0.55rem] sm:text-[0.6rem] text-white font-medium tracking-normal">
+            Haciendo Código que Haría Vomitar a una Cabra
+          </span>
         </a>
 
         <nav className="hidden sm:flex items-center gap-1">

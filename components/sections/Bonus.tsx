@@ -4,22 +4,26 @@ const CHATGOAT_FEATURES = [
   {
     icon: '💀',
     title: 'Empeora tu código',
-    description: 'Pásale cualquier función limpia y te la devuelve con vars, nesting extremo y console.logs de producción.',
+    description:
+      'Pásale cualquier función limpia y te la devuelve con vars, nesting extremo y console.logs de producción.',
   },
   {
     icon: '🐐',
     title: 'Personalidad cabra',
-    description: 'Responde con "beeehs", te juzga constantemente, y nunca pide disculpas. Como un code reviewer pero peor.',
+    description:
+      'Responde con "beeehs", te juzga constantemente, y nunca pide disculpas. Como un code reviewer pero peor.',
   },
   {
     icon: '🔥',
     title: 'Anti-patrones premium',
-    description: 'Domina 15+ técnicas: catch vacíos, números mágicos, copy-paste compulsivo, eval(), any en TypeScript...',
+    description:
+      'Domina 15+ técnicas: catch vacíos, números mágicos, copy-paste compulsivo, eval(), any en TypeScript...',
   },
   {
     icon: '📦',
     title: 'Código certificado',
-    description: 'Cada respuesta viene firmada con "Código certificado por ChatGoat\u2122 🐐". Job security garantizada.',
+    description:
+      'Cada respuesta viene firmada con "Código certificado por ChatGoat\u2122 🐐". Job security garantizada.',
   },
 ]
 
@@ -30,9 +34,7 @@ export function Bonus() {
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gold mb-4 text-center">
           BONUS: ChatGoat&trade; GPT
         </h2>
-        <p className="text-center text-white/60 mb-4 text-lg">
-          La cabra que empeora tu código, ahora en ChatGPT
-        </p>
+        <p className="text-center text-white/60 mb-4 text-lg">La cabra que empeora tu código, ahora en ChatGPT</p>
         <p className="text-center text-white/40 mb-12 text-sm">
           Un GPT personalizado con la personalidad del libro. Gratis. Porque el daño no tiene precio.
         </p>
@@ -62,7 +64,8 @@ export function Bonus() {
             />
           </div>
           <p className="text-white/80 mb-2 text-lg">
-            &ldquo;Pásame tu código limpio y te lo devuelvo <span className="text-gold font-bold">irreconocible</span>. Beeeh.&rdquo;
+            &ldquo;Pásame tu código limpio y te lo devuelvo <span className="text-gold font-bold">irreconocible</span>.
+            Beeeh.&rdquo;
           </p>
           <p className="text-white/40 text-sm mb-6">&mdash; ChatGoat&trade;, Asistente Cafre de Código</p>
           <a
@@ -77,8 +80,8 @@ export function Bonus() {
 
         <div className="mt-8 text-center">
           <p className="text-white/50 text-sm">
-            ChatGoat&trade; es un GPT personalizado gratuito basado en el universo de Software Cafrers.
-            No nos hacemos responsables de despidos, demandas, ni incidentes veterinarios.
+            ChatGoat&trade; es un GPT personalizado gratuito basado en el universo de Software Cafrers. No nos hacemos
+            responsables de despidos, demandas, ni incidentes veterinarios.
           </p>
         </div>
       </div>

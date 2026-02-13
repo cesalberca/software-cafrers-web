@@ -1,5 +1,5 @@
 import { TestimonialCard } from './TestimonialCard'
-import {VideoTestimonials} from "@/components/sections/VideoTestimonials";
+import { VideoTestimonials } from '@/components/sections/VideoTestimonials'
 
 const TESTIMONIALS = [
   {
@@ -31,7 +31,7 @@ export function Testimonials() {
           Reseñas 100% reales* de publicaciones 100% existentes*
         </p>
 
-        <VideoTestimonials/>
+        <VideoTestimonials />
 
         <div className="grid sm:grid-cols-2 gap-6">
           {TESTIMONIALS.map((t) => (
@@ -40,12 +40,8 @@ export function Testimonials() {
         </div>
 
         <div className="mt-10 text-center border border-dashed border-gold/20 rounded-xl p-6 max-w-xl mx-auto bg-navy-light/10">
-          <p className="text-gold font-bold text-lg mb-2">
-            ¿Has leído el libro? ¡Deja tu reseña!
-          </p>
-          <p className="text-white/60 text-sm mb-4">
-            Envíanos tu testimonio y puede que aparezca aquí.
-          </p>
+          <p className="text-gold font-bold text-lg mb-2">¿Has leído el libro? ¡Deja tu reseña!</p>
+          <p className="text-white/60 text-sm mb-4">Envíanos tu testimonio y puede que aparezca aquí.</p>
           <a
             href="mailto:software.cafrers@cesalberca.com?subject=Testimonio%20Software%20Cafrers"
             className="inline-flex items-center gap-2 text-gold hover:text-gold-light font-bold text-sm underline underline-offset-4 transition-colors"

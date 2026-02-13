@@ -40,8 +40,7 @@ export function PeskyModal() {
           <h3 className="text-gold font-black text-2xl mb-2">¡SOY UNA MODAL SIN MODALES!</h3>
           <p className="text-white/80 mb-2">¿Ya vas por la mitad de la página y no has comprado el libro?</p>
           <p className="text-white/60 text-sm mb-6">
-            Tu código ya
-            es malo, <span className="text-gold font-bold">¿por qué no hacerlo oficial?</span>
+            Tu código ya es malo, <span className="text-gold font-bold">¿por qué no hacerlo oficial?</span>
           </p>
 
           <a

@@ -312,7 +312,9 @@ export function Hero() {
               COMPRAR AHORA
             </a>
             <div className="flex flex-col items-start gap-1">
-              <span className="text-sm text-white/50 animate-urgent-pulse">Solo quedan <u>42 copias</u>*</span>
+              <span className="text-sm text-white/50 animate-urgent-pulse">
+                Solo quedan <u>42 copias</u>*
+              </span>
               <span className="flex items-center gap-1.5 text-xs text-white/40">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
@@ -332,9 +334,7 @@ export function Hero() {
           </p>
 
           <SocialLinks
-            className={`mt-4 transition-all duration-700 delay-700 ${
-              showText ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`mt-4 transition-all duration-700 delay-700 ${showText ? 'opacity-100' : 'opacity-0'}`}
           />
         </div>
       </div>

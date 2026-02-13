@@ -46,7 +46,7 @@ const TOC_ITEMS = [
   },
   {
     title: 'Testing',
-    description: "expect(true).toBe(true)",
+    description: 'expect(true).toBe(true)',
     icon: 'OK',
   },
   {
@@ -99,11 +99,7 @@ export function WhatsIncluded() {
           <div className="inline-block border border-gold/30 rounded-xl p-6 bg-navy-light/30">
             <p className="text-gold font-bold text-lg mb-2">158 páginas de contenido irresponsable</p>
             <p className="text-white/60 text-sm">Cada página peor que la anterior. Garantizado.</p>
-            <p
-              className={`text-xs text-white/25`}
-            >
-              No son muchas páginas, pero vaya páginas.
-            </p>
+            <p className={`text-xs text-white/25`}>No son muchas páginas, pero vaya páginas.</p>
           </div>
         </div>
       </div>

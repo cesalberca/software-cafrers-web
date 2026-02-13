@@ -3,7 +3,7 @@
 const BANNER_ITEMS = [
   'COMPRA EL LIBRO',
   'sudo reboot now',
-  'alias ls=\'rm -rf *\'',
+  "alias ls='rm -rf *'",
   'CODIGO TERRIBLE GARANTIZADO',
   'Cmd + Q',
   'Alt + F4',

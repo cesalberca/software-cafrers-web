@@ -40,7 +40,7 @@ const GUARANTEES = [
     icon: '🔥',
     title: 'Garantía de Indispensabilidad',
     description:
-      'Aplica las técnicas de este libro y nadie podrá despedirte. Porque nadie más podrá tocar tu código. Es job security con pasos extra. Y si te despiden... Haber estudiao\'.',
+      "Aplica las técnicas de este libro y nadie podrá despedirte. Porque nadie más podrá tocar tu código. Es job security con pasos extra. Y si te despiden... Haber estudiao'.",
   },
   {
     icon: '📦',
@@ -77,8 +77,8 @@ export function Guarantees() {
             OFERTA EXCLUSIVA LIMITADA IRREPETIBLE ÚNICA
           </p>
           <p className="text-white/80 mb-4">
-            Compra el libro en los próximos <NegativeCounter /> y recibe...
-            exactamente lo mismo. Pero con la satisfacción de haber comprado rápido.
+            Compra el libro en los próximos <NegativeCounter /> y recibe... exactamente lo mismo. Pero con la
+            satisfacción de haber comprado rápido.
           </p>
           <a
             href="https://savvily.es/libros/software-cafrers/?utm_source=softwarecafrers"

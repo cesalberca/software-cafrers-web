@@ -85,11 +85,10 @@ export function VideoTestimonials() {
       </div>
 
       <div className="mt-10 text-center border border-dashed border-gold/20 rounded-xl p-6 max-w-xl mx-auto bg-navy-light/10">
-        <p className="text-gold font-bold text-lg mb-2">
-          ¿Has leído el libro? ¡Grábate!
-        </p>
+        <p className="text-gold font-bold text-lg mb-2">¿Has leído el libro? ¡Grábate!</p>
         <p className="text-white/60 text-sm mb-4">
-          Envía un vídeo en <span className="text-gold/80 font-medium">formato horizontal</span> hablando del libro de la forma más graciosa que puedas.
+          Envía un vídeo en <span className="text-gold/80 font-medium">formato horizontal</span> hablando del libro de
+          la forma más graciosa que puedas.
         </p>
 
         <a

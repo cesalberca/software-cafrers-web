@@ -4,7 +4,8 @@ export function FreeSample() {
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gold mb-4">Muestra Gratuita</h2>
         <p className="text-white/70 text-lg mb-8 max-w-xl mx-auto">
-          ¿Sigues creyendo que no vamos en serio? Normal. Descarga un par de capítulos gratis para que lo confirmes con tus propios ojos.
+          ¿Sigues creyendo que no vamos en serio? Normal. Descarga un par de capítulos gratis para que lo confirmes con
+          tus propios ojos.
         </p>
 
         <div className="inline-block border-2 border-dashed border-gold/30 rounded-2xl p-8 bg-navy-light/20 mb-8">

@@ -38,7 +38,8 @@ export function Epilogo() {
             </p>
 
             <p className="text-lg text-white/90 leading-relaxed">
-              Adrián confabuló la idea una charla que más tarde inspiraría la creación de este libro. Por tanto, en caso de hate o repercusiones legales debemos responsabilizarlo a él.
+              Adrián confabuló la idea una charla que más tarde inspiraría la creación de este libro. Por tanto, en caso
+              de hate o repercusiones legales debemos responsabilizarlo a él.
             </p>
 
             <div className="border border-gold/20 rounded-xl p-6 bg-navy-light/30">

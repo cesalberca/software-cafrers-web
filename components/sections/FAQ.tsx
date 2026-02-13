@@ -44,12 +44,19 @@ const FAQ_ITEMS: { question: string; answer: ReactNode }[] = [
     question: '¿Quién hizo las ilustraciones?',
     answer: (
       <>
-        Las increíbles (y muy pacientes) ilustraciones son obra de Marta Aldarias Villacañas. Puedes ver más de su trabajo en{' '}
-        <Link href="https://aldariasart.es" className="text-gold hover:text-gold-light underline underline-offset-4 transition-colors">
+        Las increíbles (y muy pacientes) ilustraciones son obra de Marta Aldarias Villacañas. Puedes ver más de su
+        trabajo en{' '}
+        <Link
+          href="https://aldariasart.es"
+          className="text-gold hover:text-gold-light underline underline-offset-4 transition-colors"
+        >
           aldariasart.es
         </Link>{' '}
         o en Instagram como{' '}
-        <Link href="https://instagram.com/aldarias_art" className="text-gold hover:text-gold-light underline underline-offset-4 transition-colors">
+        <Link
+          href="https://instagram.com/aldarias_art"
+          className="text-gold hover:text-gold-light underline underline-offset-4 transition-colors"
+        >
           @aldarias_art
         </Link>
         . Ella no tiene la culpa de nada.
@@ -67,7 +74,8 @@ const FAQ_ITEMS: { question: string; answer: ReactNode }[] = [
         >
           la respuesta a la vida, el universo y todo lo demás
         </Link>
-        . Y también es el número de países donde las estructuras de código de este libro son ilegales. ¿Coincidencia? Sí, totalmente.
+        . Y también es el número de países donde las estructuras de código de este libro son ilegales. ¿Coincidencia?
+        Sí, totalmente.
       </>
     ),
   },
