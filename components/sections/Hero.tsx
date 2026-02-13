@@ -111,7 +111,7 @@ function Book3D() {
   const [rotation, setRotation] = useState({ x: 3, y: -12 })
   const [isFlipped, setIsFlipped] = useState(false)
 
-  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     if (!containerRef.current) return
     const rect = containerRef.current.getBoundingClientRect()
     const centerX = rect.left + rect.width / 2
