@@ -18,7 +18,25 @@ export function Prologo() {
               >
                 Carlos Blé
               </a>
-              , referente en desarrollo de software, artesanía del código y prácticas ágiles en España y Latinoamérica.
+              , Co-CEO{' '}
+              <a
+                href="https://leanmind.es"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gold font-bold hover:text-gold-light underline underline-offset-4 transition-colors"
+              >
+                LeanMind
+              </a>{' '}
+              y autor del libro{' '}
+              <a
+                href="https://savvily.es/libros/codigo-sostenible/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gold font-bold hover:text-gold-light underline underline-offset-4 transition-colors"
+              >
+                Código Sostenible
+              </a>
+              . Referente en desarrollo de software, artesanía del código y prácticas ágiles en España y Latinoamérica.
             </p>
 
             <p className="text-lg text-white/90 leading-relaxed">

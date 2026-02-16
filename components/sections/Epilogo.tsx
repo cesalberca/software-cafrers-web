@@ -33,6 +33,15 @@ export function Epilogo() {
               >
                 Adrián Ferrera
               </a>
+              , Lead Software Developer & Consultant en{' '}
+              <a
+                href="https://leanmind.es"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gold font-bold hover:text-gold-light underline underline-offset-4 transition-colors"
+              >
+                LeanMind
+              </a>
               , desarrollador de software y divulgador técnico, conocido por su enfoque práctico y su capacidad para
               explicar conceptos complejos con claridad.
             </p>
