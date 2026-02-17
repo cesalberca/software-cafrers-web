@@ -32,7 +32,7 @@ export function AboutAuthor() {
 
               <div className="flex gap-4 pt-2">
                 <a
-                  href="https://cesalberca.com?utm_source=softwarecafrers"
+                  href="https://cesalberca.com?utm_source=softwarecafrers.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gold hover:text-gold-light underline underline-offset-4 transition-colors"

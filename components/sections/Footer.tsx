@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="py-12 px-4 border-t border-gold/10">
       <div className="max-w-4xl mx-auto text-center space-y-6">
         <a
-          href="https://savvily.es/?utm_source=softwarecafrers"
+          href="https://savvily.es/?utm_source=softwarecafrers.com"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block hover:opacity-80 transition-opacity"
@@ -81,7 +81,7 @@ export function Footer() {
           <p>
             Publicado por{' '}
             <a
-              href="https://savvily.es/?utm_source=softwarecafrers"
+              href="https://savvily.es/?utm_source=softwarecafrers.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gold/60 hover:text-gold underline underline-offset-4 transition-colors"

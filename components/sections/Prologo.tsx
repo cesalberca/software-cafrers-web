@@ -18,7 +18,7 @@ export function Prologo() {
               >
                 Carlos Blé
               </a>
-              , Co-CEO{' '}
+              , Co-founder{' '}
               <a
                 href="https://leanmind.es"
                 target="_blank"

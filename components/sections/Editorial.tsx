@@ -9,7 +9,7 @@ export function Editorial() {
         <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
           Publicado por{' '}
           <a
-            href="https://savvily.es/?utm_source=softwarecafrers"
+            href="https://savvily.es/?utm_source=softwarecafrers.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gold font-bold hover:text-gold-light underline underline-offset-4 transition-colors"
@@ -21,10 +21,10 @@ export function Editorial() {
         </p>
 
         <a
-          href="https://savvily.es/?utm_source=softwarecafrers"
+          href="https://savvily.es/?utm_source=softwarecafrers.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block mb-8 hover:opacity-80 transition-opacity"
+          className="inline-block mb-8 hover:opacity-80 transition-opacity max-w-[200]"
         >
           <Image
             src="/savvily.png"

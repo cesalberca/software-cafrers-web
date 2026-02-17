@@ -3,7 +3,7 @@
 import type React from 'react'
 import { trackGoal } from '@/lib/fathom-goals'
 
-const BUY_URL = 'https://savvily.es/libros/software-cafrers/?utm_source=softwarecafrers'
+const BUY_URL = 'https://savvily.es/libros/software-cafrers/?utm_source=softwarecafrers.com'
 
 const sizes = {
   sm: 'font-bold text-xs sm:text-sm px-4 py-1.5 rounded-lg',

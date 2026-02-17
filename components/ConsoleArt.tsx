@@ -54,7 +54,7 @@ export function ConsoleArt() {
 
   Ni en los Devtools te escapas de la cabra.
   COMPRA YA el libro:
-  https://savvily.es/libros/software-cafrers/?utm_source=softwarecafrers
+  https://savvily.es/libros/software-cafrers/?utm_source=softwarecafrers.com
       `,
       'color: #fcc146; font-family: monospace; font-size: 14px;',
     )

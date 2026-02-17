@@ -9,7 +9,7 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://savvily.es/libros/software-cafrers/'),
+  metadataBase: new URL('https://www.softwarecafrers.com/'),
   title: 'Software Cafrers: Haciendo Código que Haría Vomitar a una Cabra | César Alberca',
   description:
     'El libro definitivo para escribir código terrible. Aprende a crear bugs indetectables, bucles infinitos y abstracciones que solo entendería un lagarto. Por César Alberca. 42a edición.',
@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     'JavaScript',
     'desarrollo software',
     'regalo programador',
+    'regalo informático',
     'libro satírico',
     'cabra',
   ],
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
     title: 'Software Cafrers: Haciendo Código que Haría Vomitar a una Cabra',
     description:
       'El libro definitivo para escribir código terrible. Aprende a crear bugs indetectables, bucles infinitos y funciones que devuelven ansiedad.',
-    url: 'https://savvily.es/libros/software-cafrers/',
+    url: 'https://www.softwarecafrers.com/',
     siteName: 'Software Cafrers',
     images: [
       {
@@ -65,7 +66,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        <link rel="canonical" href="https://savvily.es/libros/software-cafrers/" />
+        <link rel="canonical" href="https://www.softwarecafrers.com/" />
         <script
           type="application/ld+json"
           // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data requires dangerouslySetInnerHTML
@@ -87,7 +88,7 @@ export default function RootLayout({
               bookEdition: '42a edición',
               inLanguage: 'es',
               genre: 'Humor / Programación',
-              url: 'https://savvily.es/libros/software-cafrers/',
+              url: 'https://www.softwarecafrers.com/',
               image: '/cover.png',
               description:
                 'El libro definitivo para escribir código terrible. Aprende a crear bugs indetectables, bucles infinitos y abstracciones que solo entendería un lagarto.',

@@ -15,7 +15,7 @@ export function FreeSample() {
           <p className="text-white/80 font-medium mb-2">Capítulo de muestra en PDF</p>
           <p className="text-white/50 text-sm mb-6">Nada de pirateo que me cabreo</p>
           <TrackedLink
-            href="https://savvily.es/libros/software-cafrers/muestra-software-cafrers.pdf?utm_source=softwarecafrers"
+            href="https://savvily.es/libros/software-cafrers/muestra-software-cafrers.pdf?utm_source=softwarecafrers.com"
             goal="sampleDownload"
           >
             Descargar Muestra Gratis
