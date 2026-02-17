@@ -3,8 +3,8 @@ import { SocialLinks } from '@/components/SocialLinks'
 
 export function Footer() {
   return (
-    <footer className="py-12 px-4 border-t border-gold/10">
-      <div className="max-w-4xl mx-auto text-center space-y-6">
+    <footer className="py-12 px-4 border-t border-gold/10 flex justify-center">
+      <div className="max-w-4xl mx-auto space-y-6 flex flex-col items-center justify-center">
         <a
           href="https://savvily.es/?utm_source=softwarecafrers.com"
           target="_blank"
@@ -89,13 +89,24 @@ export function Footer() {
               Savvily
             </a>
           </p>
-        </div>
+          <p>
+            Código{' '}
+            <a
+              href="https://github.com/cesalberca/software-cafrers-web"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold/60 hover:text-gold underline underline-offset-4 transition-colors"
+            >
+              Open Source
+            </a>
+          </p>
 
-        <p className="text-white/20 text-xs max-w-lg mx-auto">
-          Ningún animal fue dañado durante la creación de este libro. Varios desarrolladores sí, pero eso es
-          irrelevante. Todas las reseñas son ficticias. Los nombres de las publicaciones están mal escritos a propósito.
-          Si has llegado hasta aquí, probablemente deberías comprar el libro.
-        </p>
+          <p className="text-white/20 text-xs max-w-lg mx-auto mt-4">
+            Ningún animal fue dañado durante la creación de este libro. Varios desarrolladores sí, pero eso es
+            irrelevante. Todas las reseñas son ficticias. Los nombres de las publicaciones están mal escritos a
+            propósito. Si has llegado hasta aquí, probablemente deberías comprar el libro.
+          </p>
+        </div>
 
         <SocialLinks className="pt-2" />
 
