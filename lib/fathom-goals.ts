@@ -11,8 +11,6 @@ export const FATHOM_GOALS = {
   buyModal: 'buyModal',
   buyChatbot: 'buyChatbot',
   sampleDownload: 'sampleDownload',
-  modalShown: 'modalShown',
-  modalDismiss: 'modalDismiss',
   chatbotOpen: 'chatbotOpen',
   videoPlay: 'videoPlay',
 } as const

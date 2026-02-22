@@ -1,7 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { trackGoal } from '@/lib/fathom-goals'
+import { useEffect, useState } from 'react'
 import { BuyLink } from '@/components/BuyLink'
 
 export function PeskyModal() {
@@ -22,14 +21,7 @@ export function PeskyModal() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [dismissed])
 
-  useEffect(() => {
-    if (show && !dismissed) {
-      trackGoal('modalShown')
-    }
-  }, [show, dismissed])
-
   const dismissModal = () => {
-    trackGoal('modalDismiss')
     setDismissed(true)
   }
 
