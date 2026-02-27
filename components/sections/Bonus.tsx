@@ -32,7 +32,7 @@ export function Bonus() {
     <section id="bonus" className="py-20 px-4">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gold mb-4 text-center">
-          BONUS: ChatGoat&trade; GPT
+          BONUS I: ChatGoat&trade; GPT
         </h2>
         <p className="text-center text-white/60 mb-4 text-lg">La cabra que empeora tu código, ahora en ChatGPT</p>
         <p className="text-center text-white/40 mb-12 text-sm">
