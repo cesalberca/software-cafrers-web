@@ -14,6 +14,8 @@ import { CompanyLogos } from '@/components/sections/CompanyLogos'
 import { FreeSample } from '@/components/sections/FreeSample'
 import { Guarantees } from '@/components/sections/Guarantees'
 import { Bonus } from '@/components/sections/Bonus'
+import { Talk } from '@/components/sections/Talk'
+import { Stickers } from '@/components/sections/Stickers'
 import { FAQ } from '@/components/sections/FAQ'
 import { BuySection } from '@/components/sections/BuySection'
 import { GoatChatbot } from '@/components/sections/GoatChatbot'
@@ -66,6 +68,10 @@ export default function Home() {
       <InterlacedTestimonial quote="Inapetente incluso para rumiantes." author="National Geographyc" />
 
       <Bonus />
+
+      <Talk />
+
+      <Stickers />
 
       <FAQ />
 
