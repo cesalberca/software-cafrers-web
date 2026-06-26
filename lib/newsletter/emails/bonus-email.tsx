@@ -69,9 +69,12 @@ export const BonusEmail: FC<BonusEmailProps> = ({ bonusUrl }) => {
 
               <Text className="text-sm leading-relaxed text-muted">
                 A partir de ahora no sabemos muy bien cómo haremos uso de tu correo, pero mientras tanto te puedes
-                suscribir la <Link href="https://cesalberca.com/newsletter">Newsletter de César</Link>, el autor del
-                libro. Habla de temas de IA y Arquitectura. Si has comprado este libro dudamos de que los puedas llegar
-                a entender, pero bueno.
+                suscribir la{' '}
+                <Link href="https://cesalberca.com/newsletter?utm_source=softwarecafrers.com&utm_medium=email&utm_campaign=bonus">
+                  Newsletter de César
+                </Link>
+                , el autor del libro. Habla de temas de IA y Arquitectura. Si has comprado este libro dudamos de que los
+                puedas llegar a entender, pero bueno.
               </Text>
             </Section>
 
