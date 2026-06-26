@@ -13,6 +13,7 @@ export const FATHOM_GOALS = {
   sampleDownload: 'sampleDownload',
   chatbotOpen: 'chatbotOpen',
   videoPlay: 'videoPlay',
+  readerSignup: 'readerSignup',
 } as const
 
 export function trackGoal(goal: keyof typeof FATHOM_GOALS) {
