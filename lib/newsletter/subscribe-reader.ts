@@ -39,7 +39,7 @@ export async function subscribeReader(email: string): Promise<SubscribeReaderRes
   // already subscribed, since they scanned the QR to get the bonus. A failed email must not
   // fail the whole request.
   try {
-    await resend.emails.send({
+    const { error: emailError } = await resend.emails.send({
       from: env.RESEND_EMAIL_FROM,
       to: email,
       subject: 'Tu bonus cafre 🐐',
@@ -48,8 +48,13 @@ export async function subscribeReader(email: string): Promise<SubscribeReaderRes
         bonusUrl: `${env.NEXT_PUBLIC_URL}/bonus?token=${env.BONUS_TOKEN}`,
       }) as ReactElement,
     })
+    // resend.emails.send resolves with { error } instead of throwing on API errors,
+    // so this must be checked explicitly or failures vanish silently.
+    if (emailError) {
+      console.error('[reader] Resend rejected the bonus email:', emailError)
+    }
   } catch (error) {
-    console.error('[reader] Failed to send bonus email:', error)
+    console.error('[reader] Threw while sending the bonus email:', error)
   }
 
   return { alreadySubscribed }
