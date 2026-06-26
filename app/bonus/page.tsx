@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { ReaderForm } from './reader-form'
 
-// Full talk ("La Charla"), unlisted on YouTube. Just the video id.
 const YOUTUBE_VIDEO_ID = 'P82xrtozsw4'
 
 const CHATGOAT_URL = 'https://chatgpt.com/g/g-698daba62f1c8191a8a3f0c06934490f-software-cafrers'
@@ -21,7 +20,6 @@ const STICKERS = [
 export const metadata: Metadata = {
   title: 'Tus bonus | Software Cafrers',
   description: 'Material exclusivo para lectores del libro Software Cafrers.',
-  // Unlisted: keep it out of search engines either way.
   robots: { index: false, follow: false },
 }
 
@@ -43,8 +41,8 @@ function Gate() {
       <p className="mb-3 text-sm font-medium uppercase tracking-wide text-gold-dark">Lo que viene con el libro</p>
       <h1 className="mb-4 text-3xl font-black text-gold sm:text-4xl md:text-5xl">Tu bonus cafre te espera</h1>
       <p className="mx-auto mb-8 max-w-md text-lg leading-relaxed text-white/70">
-        Has hecho lo correcto: escanear el QR en vez de leer el libro. Déjanos tu email y desbloqueas el botín al
-        instante. De paso te apuntas a la newsletter, donde César comparte código que haría vomitar a una cabra.
+        Has hecho lo correcto: escanear el QR en vez de volver al scroll infinito. Déjanos tu email y desbloqueas el
+        botín al instante. Desconocemos todavía para qué necesitamos tu email, descubrámoslo juntos.
       </p>
 
       <div className="rounded-2xl border border-gold/20 bg-navy-light/30 p-6 text-left sm:p-8">
@@ -52,7 +50,7 @@ function Gate() {
       </div>
 
       <p className="mt-8 text-sm text-white/40">
-        ¿Te has perdido?{' '}
+        ¿Te has perdido mendrugo?{' '}
         <a
           href="https://www.softwarecafrers.com"
           className="text-gold/60 underline underline-offset-4 transition-colors hover:text-gold"

@@ -54,7 +54,7 @@ export const BonusEmail: FC<BonusEmailProps> = ({ bonusUrl }) => {
 
               <Text className="mt-0 text-base leading-relaxed text-foreground">
                 Has escaneado el QR del libro. Eso te convierte oficialmente en cómplice. No hay vuelta atrás: el daño
-                ya está hecho, como un tatuaje.
+                ya está hecho.
               </Text>
 
               <Text className="text-base leading-relaxed text-foreground">
@@ -68,8 +68,10 @@ export const BonusEmail: FC<BonusEmailProps> = ({ bonusUrl }) => {
               </Section>
 
               <Text className="text-sm leading-relaxed text-muted">
-                A partir de ahora te llegará la newsletter de César: poco spam, mucho código que haría vomitar a una
-                cabra. Puedes darte de baja cuando quieras (pero ¿por qué querrías?).
+                A partir de ahora no sabemos muy bien cómo haremos uso de tu correo, pero mientras tanto te puedes
+                suscribir la <Link href="https://cesalberca.com/newsletter">Newsletter de César</Link>, el autor del
+                libro. Habla de temas de IA y Arquitectura. Si has comprado este libro dudamos de que los puedas llegar
+                a entender, pero bueno.
               </Text>
             </Section>
 
